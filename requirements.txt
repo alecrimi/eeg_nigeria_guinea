@@ -1,0 +1,5 @@
+mne
+torch-geometric
+sklearn
+networkx
+pandas
