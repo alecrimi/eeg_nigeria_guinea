@@ -312,10 +312,18 @@ def calculate_plv_matrix(eeg_data):
     return plv_matrix
 
 def calculate_plv(signal1, signal2):
-    phase1 = np.angle(signal1)
-    phase2 = np.angle(signal2)
-    return np.abs(np.mean(np.exp(1j * (phase1 - phase2))))
- 
+    # Compute analytic (complex) signals
+    analytic1 = hilbert(signal1)
+    analytic2 = hilbert(signal2)
+
+    # Extract instantaneous phases
+    phase1 = np.angle(analytic1)
+    phase2 = np.angle(analytic2)
+
+    # Compute PLV
+    plv = np.abs(np.mean(np.exp(1j * (phase1 - phase2))))
+    return plv
+
 def compute_features(eeg_data):
  
     features = {}
