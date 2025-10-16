@@ -1,6 +1,7 @@
 # Graph attention Networks classifier for EEG data in Low-resource settings
 
-(https://github.com/alecrimi/eeg_nigeria_guinea/blob/main/grabs.jpg)
+
+![Alt text](https://github.com/alecrimi/eeg_nigeria_guinea/blob/main/grabs.jpg)
 This code comprises scripts and notebook which have been run on GoogleColab using the EEG data collected in Nigeria and Guinea Bissau: https://zenodo.org/records/1252141
 
 For details check the paper 
